@@ -1,0 +1,56 @@
+body {
+  background: linear-gradient(
+  to bottom,
+  rgba(37, 112, 170, 0.7),
+  rgba(127, 164, 202, 0.7)
+),
+    url(/static/images/background/back-body.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: auto;
+}
+
+.p {
+  font-size: 1.1rem;
+  text-indent: 1.5em;
+  text-align: justify;
+}
+
+#about {
+  padding: 50px 0;
+  margin-top: 50 0px;
+}
+
+.img-about {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 10%;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+
+.img-about:hover {
+  transform: scale(1.04);
+}
+
+@media (max-width: 575.98px) {
+  .img-about {
+    margin-top: 20px;
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .img-about {
+    margin-top: 30px;
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .img-about {
+    margin-top: 50px;
+    max-width: 70%;
+  }
+}

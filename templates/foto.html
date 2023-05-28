@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galery Image</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles/galery_foto.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles/nav.css') }}"
+    />
+    <link rel="icon" href="/static/images/logo/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
+  <body id="home">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow">
+      <div class="container">
+        <a class="navbar-brand" href="/"><img src="/static/images/logo/JogjaInfoBot1.png" alt="Logo" height="40" /></a>        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/destinasi">Destination</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/chatbot">Chatbot</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/team">Team</a>
+            </li>
+            <div class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                aria-current="page"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Gallery
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/foto">Image</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/video">Video</a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+        <a class="navbar-brand d-none d-md-block" href="/team">
+          <img
+            src="/static/images/logo/logo-minerva.png"
+            alt="Logo"
+            height="40"
+          />
+        </a>
+      </div>
+    </nav>
+    <!--End Navbar-->
+    <!--foto-->
+    <div class="container_foto">
+      <!--seach-->
+      <div class="search-box">
+        <i class="bx bx-search"></i>
+        <input type="text" placeholder="Search a Picture" />
+      </div>
+      <!--preview-->
+      <div class="lightbox">
+        <div class="wrapper">
+          <header>
+            <div class="details">
+              <i class="uil uil-camera"></i>
+              <span>JogjaInfoBot</span>
+            </div>
+            <div class="buttons"><i class="close-icon uil uil-times"></i></div>
+          </header>
+          <div class="preview-img">
+            <div class="img"><img src="" alt="preview-img" /></div>
+          </div>
+        </div>
+      </div>
+      <!--list image-->
+      <section class="gallery">
+        <ul class="images">
+          <li class="img" data-name="candi borobudur">
+            <img
+              src="/static/images/galery/foto/candi_borobudur1.jpg"
+              alt="img"
+            />
+            <h6>Candi Borobudur</h6>
+          </li>
+          <li class="img" data-name="candi borobudur">
+            <img
+              src="/static/images/galery/foto/candi_borobudur2.jpg"
+              alt="img"
+            />
+            <h6>Candi Borobudur</h6>
+          </li>
+          <li class="img" data-name="candi borobudur">
+            <img
+              src="/static/images/galery/foto/candi_borobudur3.jpg"
+              alt="img"
+            />
+            <h6>Candi Borobudur</h6>
+          </li>
+          <li class="img" data-name="candi prambanan">
+            <img
+              src="/static/images/galery/foto/candi_prambanan1.jpg"
+              alt="img"
+            />
+            <h6>Candi Prambanan</h6>
+          </li>
+          <li class="img" data-name="candi prambanan">
+            <img
+              src="/static/images/galery/foto/candi_prambanan2.jpg"
+              alt="img"
+            />
+            <h6>Candi Prambanan</h6>
+          </li>
+          <li class="img" data-name="candi prambanan">
+            <img
+              src="/static/images/galery/foto/candi_prambanan3.jpg"
+              alt="img"
+            />
+            <h6>Candi Prambanan</h6>
+          </li>
+
+  
+  <li class="img" data-name="goa jomblang">
+    <img
+      src="/static/images/galery/foto/goa_jomblang1.jpg"
+      alt="img"
+    />
+    <h6>Goa Jomblang</h6>
+  </li>
+  <li class="img" data-name="goa jomblang">
+    <img
+      src="/static/images/galery/foto/goa_jomblang2.jpg"
+      alt="img"
+    />
+    <h6>Goa Jomblang</h6>
+  </li>
+  <li class="img" data-name="goa jomblang">
+    <img
+      src="/static/images/galery/foto/goa_jomblang3.jpg"
+      alt="img"
+    />
+    <h6>Goa Jomblang</h6>
+  </li>
+  <li class="img" data-name="goa pindul">
+    <img
+      src="/static/images/galery/foto/goa_pindul1.jpg"
+      alt="img"
+    />
+    <h6>Goa Pindul</h6>
+  </li>
+  <li class="img" data-name="goa pindul">
+    <img
+      src="/static/images/galery/foto/goa_pindul2.jpg"
+      alt="img"
+    />
+    <h6>Goa Pindul</h6>
+  </li>
+  <li class="img" data-name="goa pindul">
+    <img
+      src="/static/images/galery/foto/goa_pindul3.jpg"
+      alt="img"
+    />
+    <h6>Goa Pindul</h6>
+  </li>
+  <li class="img" data-name="gunung merapi">
+    <img
+      src="/static/images/galery/foto/gunung_merapi1.jpg"
+      alt="img"
+    />
+    <h6>Gunung Merapi</h6>
+  </li>
+  <li class="img" data-name="gunung merapi">
+    <img
+      src="/static/images/galery/foto/gunung_merapi2.jpg"
+      alt="img"
+    />
+    <h6>Gunung Merapi</h6>
+  </li>
+  <li class="img" data-name="gunung merapi">
+    <img
+      src="/static/images/galery/foto/gunung_merapi3.jpg"
+      alt="img"
+    />
+    <h6>Gunung Merapi</h6>
+  </li>
+  <li class="img" data-name="hutan pinus mangunan">
+    <img
+      src="/static/images/galery/foto/hutan_pinus_mangunan1.jpg"
+      alt="img"
+    />
+    <h6>Hutan pinus Mangunan</h6>
+  </li>
+  <li class="img" data-name="hutan pinus mangunan">
+    <img
+      src="/static/images/galery/foto/hutan_pinus_mangunan2.jpg"
+      alt="img"
+    />
+    <h6>Hutan pinus Mangunan</h6>
+  </li>
+  <li class="img" data-name="hutan pinus mangunan">
+    <img
+      src="/static/images/galery/foto/hutan_pinus_mangunan3.jpg"
+      alt="img"
+    />
+    <h6>Hutan pinus Mangunan</h6>
+  </li>
+  <li class="img" data-name="keraton yogyakarta">
+    <img
+      src="/static/images/galery/foto/keraton_yogyakarta1.jpg"
+      alt="img"
+    />
+    <h6>Keraton Yogyakarta</h6>
+  </li>
+  <li class="img" data-name="keraton yogyakarta">
+    <img
+      src="/static/images/galery/foto/keraton_yogyakarta2.jpg"
+      alt="img"
+    />
+    <h6>Keraton Yogyakarta</h6>
+  </li>
+  <li class="img" data-name="keraton yogyakarta">
+    <img
+      src="/static/images/galery/foto/keraton_yogyakarta3.jpg"
+      alt="img"
+    />
+    <h6>Keraton Yogyakarta</h6>
+  </li>
+  <li class="img" data-name="malioboro">
+    <img
+      src="/static/images/galery/foto/malioboro1.jpg"
+      alt="img"
+    />
+    <h6>Malioboro</h6>
+  </li>
+  <li class="img" data-name="malioboro">
+    <img
+      src="/static/images/galery/foto/malioboro2.jpg"
+      alt="img"
+    />
+    <h6>Malioboro</h6>
+  </li>
+  <li class="img" data-name="malioboro">
+    <img
+      src="/static/images/galery/foto/malioboro3.jpg"
+      alt="img"
+    />
+    <h6>Malioboro</h6>
+  </li>
+  <li class="img" data-name="monumen yogya kembali">
+    <img
+      src="/static/images/galery/foto/monumen_yogya_kembali1.jpg"
+      alt="img"
+    />
+    <h6>Monumen Yogya Kembali</h6>
+  </li>
+  <li class="img" data-name="monumen yogya kembali">
+    <img
+      src="/static/images/galery/foto/monumen_yogya_kembali2.jpg"
+      alt="img"
+    />
+    <h6>Monumen Yogya Kembali</h6>
+  </li>
+  <li class="img" data-name="monumen yogya kembali">
+    <img
+      src="/static/images/galery/foto/monumen_yogya_kembali3.jpg"
+      alt="img"
+    />
+    <h6>Monumen Yogya Kembali</h6>
+  </li>
+  <li class="img" data-name="museum ullen sentalu">
+    <img
+      src="/static/images/galery/foto/museum_ullen_sentalu1.jpg"
+      alt="img"
+    />
+    <h6>Museum Ullen Sentalu</h6>
+  </li>
+  <li class="img" data-name="museum ullen sentalu">
+    <img
+      src="/static/images/galery/foto/museum_ullen_sentalu2.jpg"
+      alt="img"
+    />
+    <h6>Museum Ullen Sentalu</h6>
+  </li>
+  <li class="img" data-name="museum ullen sentalu">
+    <img
+      src="/static/images/galery/foto/museum_ullen_sentalu3.jpg"
+      alt="img"
+    />
+    <h6>Museum Ullen Sentalu</h6>
+  </li>
+  <li class="img" data-name="pantai parangtritis">
+    <img
+      src="/static/images/galery/foto/pantai_parangtritis1.jpg"
+      alt="img"
+    />
+    <h6>Pantai Parangtritis</h6>
+  </li>
+  <li class="img" data-name="pantai parangtritis">
+    <img
+      src="/static/images/galery/foto/pantai_parangteritis2.jpg"
+      alt="img"
+    />
+    <h6>Pantai Parangtritis</h6>
+  </li>
+  <li class="img" data-name="pantai parangtritis">
+    <img
+      src="/static/images/galery/foto/pantai_parangtritis3.jpg"
+      alt="img"
+    />
+    <h6>Pantai Parangtritis</h6>
+  </li>
+</li>
+  <li class="img" data-name="taman pintar yogya">
+    <img
+      src="/static/images/galery/foto/taman_pintar_yogya1.jpg"
+      alt="img"
+    />
+    <h6>Taman Pintar Yogya</h6>
+  </li>
+  <li class="img" data-name="taman pintar yogya">
+    <img
+      src="/static/images/galery/foto/taman_pintar_yogya2.jpg"
+      alt="img"
+    />
+    <h6>Taman Pintar Yogya</h6>
+  </li>
+  <li class="img" data-name="taman pintar yogya">
+    <img
+      src="/static/images/galery/foto/taman_pintar_yogya3.jpg"
+      alt="img"
+    />
+    <h6>Taman Pintar Yogya</h6>
+  </li>
+  <li class="img" data-name="taman sari">
+    <img
+      src="/static/images/galery/foto/taman_sari1.jpg"
+      alt="img"
+    />
+    <h6>Taman Sari</h6>
+  </li>
+  <li class="img" data-name="taman sari">
+    <img
+      src="/static/images/galery/foto/taman_sari2.jpg"
+      alt="img"
+    />
+    <h6>Taman Sari</h6>
+  </li>
+  <li class="img" data-name="taman sari">  
+    <img
+      src="/static/images/galery/foto/taman_sari3.jpg"
+      alt="img"
+    />
+    <h6>Taman Sari</h6>
+  </li>
+
+</li>
+<li class="img" data-name="air terjun kedung pedut">
+  <img
+    src="/static/images/galery/foto/kedung_pedut1.jpg"
+    alt="img"
+  />
+  <h6>Air Terjun Kedung Pedut</h6>
+</li>
+</li>
+<li class="img" data-name="air terjun kedung pedut">
+  <img
+    src="/static/images/galery/foto/kedung_pedut2.jpg"
+    alt="img"
+  />
+  <h6>Air Terjun Kedung Pedut</h6>
+</li>
+</li>
+<li class="img" data-name="air terjun kedung pedut">
+  <img
+    src="/static/images/galery/foto/kedung_pedut3.jpg"
+    alt="img"
+  />
+  <h6>Air Terjun Kedung Pedut</h6>
+</li>
+</li>
+<li class="img" data-name="embung nglanggeran">
+  <img
+    src="/static/images/galery/foto/embung_nglanggeran1.jpg"
+    alt="img"
+  />
+  <h6>Embung Nglanggeran</h6>
+</li>
+</li>
+<li class="img" data-name="embung nglanggeran">
+  <img
+    src="/static/images/galery/foto/embung_nglanggeran2.jpg"
+    alt="img"
+  />
+  <h6>Embung Nglanggeran</h6>
+</li>
+</li>
+<li class="img" data-name="embung nglanggeran">
+  <img
+    src="/static/images/galery/foto/embung_nglanggeran3.jpg"
+    alt="img"
+  />
+  <h6>Embung Nglanggeran</h6>
+</li>
+</li>
+<li class="img" data-name="gumuk pasir">
+  <img
+    src="/static/images/galery/foto/gumuk_pasir1.jpeg"
+    alt="img"
+  />
+  <h6>Gumuk Pasir</h6>
+</li>
+</li>
+<li class="img" data-name="gumuk pasir">
+  <img
+    src="/static/images/galery/foto/gumuk_pasir2.jpg"
+    alt="img"
+  />
+  <h6>Gumuk Pasir</h6>
+</li>
+</li>
+<li class="img" data-name="gumuk pasir">
+  <img
+    src="/static/images/galery/foto/gumuk_pasir3.jpg"
+    alt="img"
+  />
+  <h6>Gumuk Pasir</h6>
+</li>
+</li>
+<li class="img" data-name="heha ocean view">
+  <img
+    src="/static/images/galery/foto/heha_ocean1.jpg"
+    alt="img"
+  />
+  <h6>Heha Ocean View</h6>
+</li>
+</li>
+<li class="img" data-name="heha ocean view">
+  <img
+    src="/static/images/galery/foto/heha_ocean2.jpg"
+    alt="img"
+  />
+  <h6>Heha Ocean View</h6>
+</li>
+</li>
+<li class="img" data-name="heha ocean view">
+  <img
+    src="/static/images/galery/foto/heha_ocean3.jpg"
+    alt="img"
+  />
+  <h6>Heha Ocean View</h6>
+</li>
+</li>
+<li class="img" data-name="hutan mangrove kulon progo">
+  <img
+    src="/static/images/galery/foto/mangrove1.jpg"
+    alt="img"
+  />
+  <h6>Hutan Mangrove Kulon Progo</h6>
+</li>
+</li>
+<li class="img" data-name="hutan mangrove kulon progo">
+  <img
+    src="/static/images/galery/foto/mangrove2.jpg"
+    alt="img"
+  />
+  <h6>Hutan Mangrove Kulon Progo</h6>
+</li>
+</li>
+<li class="img" data-name="hutan mangrove kulon progo">
+  <img
+    src="/static/images/galery/foto/mangrove3.jpg"
+    alt="img"
+  />
+  <h6>Hutan Mangrove Kulon Progo</h6>
+</li>
+</li>
+<li class="img" data-name="puncak segoro">
+  <img
+    src="/static/images/galery/foto/puncak_segoro1.jpg"
+    alt="img"
+  />
+  <h6>Puncak Segoro</h6>
+</li>
+</li>
+<li class="img" data-name="puncak segoro">
+  <img
+    src="/static/images/galery/foto/puncak_segoro2.jpg"
+    alt="img"
+  />
+  <h6>Puncak Segoro</h6>
+</li>
+</li>
+<li class="img" data-name="puncak segoro">
+  <img
+    src="/static/images/galery/foto/puncak_segoro3.jpg"
+    alt="img"
+  />
+  <h6>Puncak Segoro</h6>
+</li>
+</li>
+<li class="img" data-name="taman nasional kalibiru">
+  <img
+    src="/static/images/galery/foto/kalibiru1.jpg"
+    alt="img"
+  />
+  <h6>Taman Nasional Kalibiru</h6>
+</li>
+</li>
+<li class="img" data-name="taman nasional kalibiru">
+  <img
+    src="/static/images/galery/foto/kalibiru2.jpg"
+    alt="img"
+  />
+  <h6>Taman Nasional Kalibiru</h6>
+</li>
+</li>
+<li class="img" data-name="taman nasional kalibiru">
+  <img
+    src="/static/images/galery/foto/kalibiru3.jpg"
+    alt="img"
+  />
+  <h6>Taman Nasional Kalibiru</h6>
+</li>
+</li>
+<li class="img" data-name="tebing breksi">
+  <img
+    src="/static/images/galery/foto/tebing_breksi1.jpg"
+    alt="img"
+  />
+  <h6>Tebing Breksi</h6>
+</li>
+</li>
+<li class="img" data-name="tebing breksi">
+  <img
+    src="/static/images/galery/foto/tebing_breksi2.jpeg"
+    alt="img"
+  />
+  <h6>Tebing Breksi</h6>
+</li>
+</li>
+<li class="img" data-name="tebing breksi">
+  <img
+    src="/static/images/galery/foto/tebing_breksi3.jpg"
+    alt="img"
+  />
+  <h6>Tebing Breksi</h6>
+</li>
+          <li class="img" data-name="pantai indrayanti">
+            <img
+              src="/static/images/galery/foto/indrayanti1.png"
+              alt="img"
+            />
+            <h6>Pantai Indrayanti</h6>
+          </li>
+          <li class="img" data-name="pantai indrayanti">
+            <img
+              src="/static/images/galery/foto/indrayanti2.jpg"
+              alt="img"
+            />
+            <h6>Pantai Indrayanti</h6>
+          </li>
+          <li class="img" data-name="pantai indrayanti">
+            <img
+              src="/static/images/galery/foto/indrayanti3.jpeg"
+              alt="img"
+            />
+            <h6>Pantai Indrayanti</h6>
+          </li>
+          
+</ul>
+</section>
+</div>
+
+
+
+
+    <!--end Destinasi-->
+    <script src="/static/scripts/foto.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--gsap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+      gsap.from(".search-box", {
+        duration: 2.5,
+        y: -100,
+        opacity: 0,
+      });
+      gsap.from(".img", {
+        duration: 2.5,
+        y: 200,
+        opacity: 0,
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,119 @@
+* {
+    font-family: "Raleway", sans-serif;
+  }
+  
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/static/images/background/back-index.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.card
+{
+    position: relative;
+    width: 350px;
+    height: 190px;
+    background: linear-gradient(to bottom, #3a6ea5, #8ac1f7, #b2dbd5);
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+
+}
+
+.card:hover {
+    height: 450px;
+}
+
+.imgBx {
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.card:hover .imgBx {
+    width: 250px;
+    height: 250px;
+}
+
+.imgBx img {
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 120%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.card .content .details {
+    padding: 50px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(150px);
+}
+
+.card:hover .content .details {
+    transform: translateY(0px);
+    margin-top: 0%;
+    
+}
+
+.card .content .details h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: black;
+    line-height: 1.2em;
+}
+
+.card .content .details h2 span {
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.card .content .details .date {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.card .content .details .date h3 {
+    font-size: 1em;
+    color: black;
+    line-height: 1,5em;
+    font-weight: 600;
+}
+
+.btn{
+    background-color: #97a2ff;
+    color: black;
+    line-height: 1,5em;
+    font-weight: 600;
+}
+.btn_primary {
+    background-color: #8ac1f7;
+    color: #000000;
+}

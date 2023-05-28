@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles/about.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles/nav.css') }}"
+    />
+    <link rel="icon" href="/static/images/logo/logo.png" type="image/x-icon" />
+  </head>
+  <body id="about">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow">
+      <div class="container">
+        <a class="navbar-brand" href="/"><img src="/static/images/logo/JogjaInfoBot1.png" alt="Logo" height="40" /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/about"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/destinasi">Destination</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/chatbot">Chatbot</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/team">Team</a>
+            </li>
+            <div class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Gallery
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/foto">Image</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/video">Video</a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+        <a class="navbar-brand d-none d-md-block" href="/team">
+          <img
+            src="/static/images/logo/logo-minerva.png"
+            alt="Logo"
+            height="40"
+          />
+        </a>
+      </div>
+    </nav>
+    <!--End Navbar-->
+
+    <!--About-->
+    <section id="about">
+      <div class="container text-center">
+        <div class="title">
+          <h2 class="title-about"><b></b></h2>
+        </div>
+        <img
+          src="/static/images/background/back-about.jpg"
+          class="col-md-6 float-md-end rounded-4 img-about mt-1"
+          alt="..."
+        />
+        <div class="p">
+          <p>
+            Yogyakarta adalah kota yang terletak di Pulau Jawa, Indonesia. Kota
+            ini memiliki luas wilayah sekitar 32,5 km² dan populasinya sekitar
+            500.000 jiwa. Yogyakarta terkenal dengan sejarah, kebudayaan, dan
+            kuliner khasnya yang kaya serta memiliki banyak destinasi wisata
+            yang menarik.
+          </p>
+
+          <p>
+            Sebagai kota pelajar, Yogyakarta memiliki banyak universitas dan
+            institusi pendidikan terkenal di Indonesia, seperti Universitas
+            Gadjah Mada, Universitas Negeri Yogyakarta, dan Universitas Islam
+            Indonesia. Hal ini membuat Yogyakarta menjadi pusat kegiatan
+            akademik dan kultural di Indonesia.
+          </p>
+
+          <p>
+            Secara keseluruhan, Yogyakarta merupakan kota yang kaya akan
+            sejarah, kebudayaan, dan kuliner. Kota ini merupakan tempat yang
+            menarik untuk dikunjungi bagi mereka yang ingin mengetahui lebih
+            dalam tentang sejarah dan budaya Indonesia, serta menikmati
+            keindahan destinasi wisata yang menarik.
+          </p>
+
+          <p>
+            Yogyakarta adalah kota yang menawarkan pengalaman wisata yang tak
+            terlupakan. Jangan ragu untuk mengunjungi kota ini dan menikmati
+            keindahan, kebudayaan, dan keramahan yang ditawarkannya!
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--End About-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".title-about", {
+        duration: 2,
+        text: "About",
+      });
+      gsap.from(".img-about", { duration: 2, x: 100, opacity: 0});
+      gsap.from(".p", { duration: 2, x: -100, opacity: 0});
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

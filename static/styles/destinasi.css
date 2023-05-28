@@ -1,0 +1,132 @@
+body {
+  background: linear-gradient(
+      to bottom,
+      rgba(39, 120, 182, 0.719),
+      rgba(127, 164, 202, 0.7)
+    ),
+    url(https://i.pinimg.com/originals/0c/9d/6b/0c9d6bb3b3a032c7282abbf976ce9aba.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: auto;
+  padding-bottom: 40px;
+}
+.container-search .search-box {
+  position: relative;
+  height: 40px;
+  max-width: 400px;
+  margin: 100px auto 20px;
+}
+
+.search-box input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: 2px solid #007bff;
+  background-color: #b8d5f1be;
+  padding: 0 15px 0 45px;
+  color: #000;
+  border-radius: 100px;
+}
+
+.search-box i {
+  position: absolute;
+  z-index: 2;
+  color: #999;
+  top: 50%;
+  left: 15px;
+  font-size: 20px;
+  transform: translateY(-50%);
+}
+.container-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+  padding: 100px 10px;
+}
+
+.container-img .card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 300px;
+  background: #b8d5f1be;
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+}
+
+.container-img .card:hover {
+  height: 400px;
+}
+
+.container-img .card .imgbx {
+  position: absolute;
+  align-items: center;
+  top: 20px;
+  width: 90%;
+  height: 220px;
+  background: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.container-img .card:hover .imgbx {
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.container-img .card .imgbx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-img .card .content {
+  position: absolute;
+  top: 252px;
+  width: 100%;
+  padding: 0 30px;
+  height: 35px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.container-img .card:hover .content {
+  top: 130px;
+  height: 250px;
+  overflow: auto;
+}
+
+.container-img .card .content h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.container-img .card .content p {
+  color: #333;
+  text-align: justify;
+  text-indent: 1.5em;
+}
+
+.container-img .card .content a {
+  position: relative;
+  display: inline-block;
+  padding: 12px 15px;
+  color: #246fe2;
+  font-weight: 600;
+  text-decoration: none;
+}

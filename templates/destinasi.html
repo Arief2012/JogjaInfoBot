@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Destination</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles/destinasi.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles/nav.css') }}"
+    />
+    <link rel="icon" href="/static/images/logo/logo.png" type="image/x-icon" />
+  </head>
+  <body id="home">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow">
+      <div class="container">
+        <a class="navbar-brand" href="/"
+          ><img
+            src="/static/images/logo/JogjaInfoBot1.png"
+            alt="Logo"
+            height="40"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/destinasi"
+                >Destination</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/chatbot">Chatbot</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/team">Team</a>
+            </li>
+            <div class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Gallery
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/foto">Image</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/video">Video</a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+        <a class="navbar-brand d-none d-md-block" href="/team">
+          <img
+            src="/static/images/logo/logo-minerva.png"
+            alt="Logo"
+            height="40"
+          />
+        </a>
+      </div>
+    </nav>
+    <!--End Navbar-->
+
+    <!--Search-->
+    <div class="container-search">
+      <div class="search-box">
+        <i class="bx bx-search"></i>
+        <input type="text" placeholder="Search a Popular Destination" />
+      </div>
+    </div>
+    <!--End -->
+
+    <!--Destinasi-->
+    <div class="container-img">
+      <div class="card" data-name="malioboro">
+        <div class="imgbx">
+          <img src="/static/images/galery/foto/malioboro2.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h2>Malioboro</h2>
+          <p>
+            Jalan ini menghubungkan Tugu Yogyakarta hingga menjelang kompleks
+            Keraton Yogyakarta. Di sisi utara adalah Jalan Margo Utomo, yang
+            terbentang dari selatan kawasan Tugu hingga sisi timur Stasiun
+            Yogyakarta. Antara Jalan Margo Utomo dan Jalan Malioboro dipisahkan
+            dengan perlintasan kereta api yang cukup unik, di mana perlintasan
+            ini menggunakan palang pintu berjenis geser.
+          </p>
+          <a href="https://maps.google.com/maps?q=malioboro%20" target="_blank"
+            >Maps
+            <i
+              class="fa-solid fa-location-dot fa-bounce fa-xl"
+              style="color: #246fe2"
+            ></i
+          ></a>
+        </div>
+      </div>
+      <div class="card" data-name="candi prambanan">
+        <div class="imgbx">
+          <img src="/static/images/galery/foto/candi_prambanan3.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h2>Candi Prambanan</h2>
+          <p>
+            Prambanan adalah candi Hindu terbesar dan termegah yang pernah
+            dibangun di Jawa kuno, pembangunan candi Hindu kerajaan ini dimulai
+            oleh Sri Maharaja Rakai Pikatan sebagai tandingan candi Buddha
+            Borobudur dan juga candi Sewu yang terletak tak jauh dari Prambanan.
+            Beberapa sejarawan lama menduga bahwa pembangunan candi agung Hindu
+            ini untuk menandai kembali berkuasanya keluarga Sanjaya atas Jawa,
+            hal ini terkait teori wangsa kembar berbeda keyakinan yang saling
+            bersaing; yaitu wangsa Sanjaya penganut Hindu dan wangsa Sailendra
+            penganut Buddha. Pastinya, dengan dibangunnya candi ini menandai
+            bahwa Hinduisme aliran Saiwa kembali mendapat dukungan keluarga
+            kerajaan, setelah sebelumnya wangsa Sailendra cenderung lebih
+            mendukung Buddha aliran Mahayana. Hal ini menandai bahwa kerajaan
+            Medang beralih fokus dukungan keagamaannya, dari Buddha Mahayana ke
+            pemujaan terhadap Siwa.
+          </p>
+          <a
+            href="https://maps.google.com/maps?q=candi%20perambanan"
+            target="_blank"
+            >Maps
+            <i
+              class="fa-solid fa-location-dot fa-bounce fa-xl"
+              style="color: #246fe2"
+            ></i
+          ></a>
+        </div>
+      </div>
+      <div class="card" data-name="pantai parangtritis">
+        <div class="imgbx">
+          <img
+            src="/static/images/galery/foto/pantai_parangtritis1.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <h2>Pantai Parangtritis</h2>
+          <p>
+            Pesona Pantai Parangtritis tidak bisa lepas dari sejarah, legenda,
+            dan mitos Ratu Pantai Selatan yang sudah sangat terkenal di
+            Indonesia. Hal itu berawal dari cerita mitos tentang kerajaan yang
+            konon ada di laut sekitar pantai. Nyi Roro Kidul sendiri sudah
+            menjadi sejarah panjang Yogyakarta dan Kerajaan Mataram. Ada banyak
+            cerita dan mitos yang beredar seputar Nyi Roro Kidul sang Ratu Laut
+            Selatan.
+          </p>
+          <a
+            href="https://maps.google.com/maps?q=parangteritis%20"
+            target="_blank"
+            >Maps
+            <i
+              class="fa-solid fa-location-dot fa-bounce fa-xl"
+              style="color: #246fe2"
+            ></i
+          ></a>
+        </div>
+      </div>
+      <div class="card" data-name="gunung merapi">
+        <div class="imgbx">
+          <img src="/static/images/galery/foto/gunung_merapi1.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h2>Gunung Merapi</h2>
+          <p>
+            Gunung Merapi (ketinggian puncak 2.930 mdpl, per 2010) (Jawa:
+            ꦒꦸꦤꦸꦁ​ꦩꦼꦫꦥꦶ, translit. Gunung Mêrapi) adalah gunung berapi di bagian
+            tengah Pulau Jawa dan merupakan salah satu gunung api teraktif di
+            Indonesia. Lereng sisi selatan berada dalam administrasi Kabupaten
+            Sleman, Daerah Istimewa Yogyakarta, dan sisanya berada dalam wilayah
+            Provinsi Jawa Tengah, yaitu Kabupaten Magelang di sisi barat,
+            Kabupaten Boyolali di sisi utara dan timur, serta Kabupaten Klaten
+            di sisi tenggara. Kawasan hutan di sekitar puncaknya menjadi kawasan
+            Taman Nasional Gunung Merapi sejak tahun 2004.
+          </p>
+          <a href="https://maps.google.com/maps?q=merapi%20" target="_blank"
+            >Maps
+            <i
+              class="fa-solid fa-location-dot fa-bounce fa-xl"
+              style="color: #246fe2"
+            ></i
+          ></a>
+        </div>
+      </div>
+      <div class="card" data-name="goa jomblang">
+        <div class="imgbx">
+          <img src="/static/images/galery/foto/goa_jomblang1.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h2>Goa Jomblang</h2>
+          <p>
+            Gua Jomblang merupakan gua vertikal yang bertipe collapse doline
+            yang juga menjadi objek wisata di Gunungkidul. Gua ini terbentuk
+            akibat proses geologi amblasnya tanah beserta vegetasi yang ada di
+            atasnya ke dasar bumi yang terjadi ribuan tahun lalu. Runtuhan ini
+            membentuk sinkhole atau sumuran yang dalam bahasa Jawa dikenal
+            dengan istilah luweng. Itulah yang membuat unik karena di dalam gua
+            terdapat luas mulut gua sekitar 50 meter ini sering disebut dengan
+            nama Luweng Jomblang. Gua Jomblang terletak di Kabupaten
+            Gunungkidul, DI Yogyakarta.
+          </p>
+          <a
+            href="https://maps.google.com/maps?q=goa%20jomblang"
+            target="_blank"
+            >Maps
+            <i
+              class="fa-solid fa-location-dot fa-bounce fa-xl"
+              style="color: #246fe2"
+            ></i
+          ></a>
+        </div>
+      </div>
+      <div class="card" data-name="goa pindul">
+        <div class="imgbx">
+          <img src="/static/images/galery/foto/goa_pindul1.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h2>Goa Pindul</h2>
+          <p>
+            Gua Pindul (Jawa: ꦒꦸꦮꦥꦶꦤ꧀ꦢꦸꦭ꧀, translit. Guwa Pindul) adalah objek
+            wisata berupa gua yang terletak di Desa Bejiharjo, Kecamatan
+            Karangmojo, Kabupaten Gunungkidul. Gua Pindul dikenal karena cara
+            menyusuri gua yang dilakukan dengan menaiki ban pelampung di atas
+            aliran sungai bawah tanah di dalam gua, kegiatan ini dikenal dengan
+            istilah cave tubing. Aliran sungai bawah tanah dimulai dari mulut
+            gua sampai bagian akhir gua, di dalam gua terdapat bagian sempit
+            yang hanya bisa dilewati satu ban pelampung, sehingga biasanya
+            wisatawan akan bergantian satu per satu untuk melewati bagian ini.
+            Panjang gua Pindul adalah 350 meter dengan lebar 5 meter dan jarak
+            permukaan air dengan atap gua 4 meter. Penelusuran gua Pindul
+            memakan waktu kurang lebih selama satu jam yang berakhir pada sebuah
+            dam. Aliran sungai yang berada di dalam Gua Pindul berasal dari mata
+            air Gedong Tujuh. Objek wisata Gua Pindul diresmikan pada 10 Oktober
+            2010.
+          </p>
+          <a href="https://maps.google.com/maps?q=goa%20pindul" target="_blank"
+            >Maps
+            <i
+              class="fa-solid fa-location-dot fa-bounce fa-xl"
+              style="color: #246fe2"
+            ></i
+          ></a>
+        </div>
+      </div>
+      <div class="card" data-name="keraton yogyakarta">
+        <div class="imgbx">
+          <img
+            src="/static/images/galery/foto/keraton_yogyakarta1.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <h2>Keraton Yogyakarta</h2>
+          <p>
+            Keraton Ngayogyakarta Hadiningrat atau Keraton Yogyakarta merupakan
+            istana resmi Kesultanan Ngayogyakarta Hadiningrat yang kini
+            berlokasi di Kota Yogyakarta. Keraton ini didirikan oleh Sri Sultan
+            Hamengkubuwana I pada tahun 1755 sebagai Istana/Keraton Yogyakarta
+            yang baru berdiri akibat perpecahan Mataram Islam dengan adanya
+            Perjanjian Giyanti. Keraton ini adalah pecahan dari Keraton
+            Surakarta Hadiningrat dari Mataram Islam Surakarta (Kerajaan
+            Surakarta). Sehingga dinasti Mataram diteruskan oleh 2 Kerajaan
+            yakni Kesultanan Yogyakarta dan Kesunanan Surakarta. Total luas
+            wilayah keseluruhan keraton yogyakarta mencapai 184 hektar, yakni
+            meliputi seluruh area di dalam benteng Baluwarti, alun-alun Lor,
+            alun-alun Kidul, gapura Gladak, dan kompleks Masjid Gedhe
+            Yogyakarta. Sementara luas dari kedhaton (inti keraton) mencapai 13
+            hektar.
+          </p>
+          <a
+            href="https://maps.google.com/maps?q=keraton%20yogyakarta"
+            target="_blank"
+            >Maps
+            <i
+              class="fa-solid fa-location-dot fa-bounce fa-xl"
+              style="color: #246fe2"
+            ></i
+          ></a>
+        </div>
+      </div>
+      <div class="card" data-name="taman sari">
+        <div class="imgbx">
+          <img src="/static/images/galery/foto/taman_sari1.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h2>Taman Sari</h2>
+          <p>
+            Taman Sari merupakan cagar budaya warisan Keraton Yogyakarta yang
+            masih dapat kita lihat berdiri gagah. Taman sari dibangun pada masa
+            pemerintahan Sri Sultan HB I, pada tahun 1758. Sampai saat ini
+            istana Taman sari sudah mengalami beberapa kali renovasi sehingga
+            terllihat menarik tanpa menghilangkan nilai historisnya. Taman sari
+            terletak sekitar 300 meter sebelah barat dari Keraton Yogyakarta.
+            Keindahan Tamansari Yogyakarta salah satunya yaitu memiliki kolam
+            air yang dikelilingi benteng setinggi 6 meter. Pada zaman dahulu
+            Tamansari dipergunakan untuk mandi para istri-istri Sultan HB X.
+            Ditempat tesebut anda akan menemukan tempat semacam menara yang
+            dipergunakan untuk melihat dan mengamati istri-istrinya yang sedang
+            mandi.
+          </p>
+          <a href="https://maps.google.com/maps?q=taman%20sari" target="_blank"
+            >Maps
+            <i
+              class="fa-solid fa-location-dot fa-bounce fa-xl"
+              style="color: #246fe2"
+            ></i
+          ></a>
+        </div>
+      </div>
+      <div class="card" data-name="museum ullen sentalu">
+        <div class="imgbx">
+          <img
+            src="/static/images/galery/foto/museum_ullen_sentalu1.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <h2>Museum Ullen Sentalu</h2>
+          <p>
+            Museum Ullen Sentalu adalah museum swasta yang diprakarsai oleh
+            keluarga Haryono dari Jogja dan berada di bawah payung Yayasan
+            Ulating Blencong dengan penasehat antara lain: I.S.K.S. Paku Buwono
+            XII, KGPAA Paku Alam VIII, GBPH Poeger, GRAy Siti Nurul
+            Kusumawardhani, Ibu Hartini Soekarno, serta KP. dr. Samuel
+            Wedyadiningrat, Sp.(B). K.(Onk). Museum ini diresmikan pada tanggal
+            1 Maret 1997, oleh KGPAA Paku Alam VIII, Gubernur Propinsi Daerah
+            Istimewa Yogyakarta pada waktu itu.
+          </p>
+          <a
+            href="https://maps.google.com/maps?q=museum_ullen_sentalu%20"
+            target="_blank"
+            >Maps
+            <i
+              class="fa-solid fa-location-dot fa-bounce fa-xl"
+              style="color: #246fe2"
+            ></i
+          ></a>
+        </div>
+      </div>
+      <div class="card" data-name="hutan pinus mangunan">
+        <div class="imgbx">
+          <img
+            src="/static/images/galery/foto/hutan_pinus_mangunan1.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <h2>Hutan Pinus Mangunan</h2>
+          <p>
+            Hutan Pinus Mangunan (Jawa: ꦄꦭꦱ꧀​ꦥꦶꦤꦸꦱ꧀​ꦩꦔꦸꦤꦤ꧀, translit. Alas Pinus
+            Mangunan) merupakan salah satu wisata alam andalan Kabupaten Bantul.
+            Wisata alam ini berlokasi di Dusun Sukorame, Desa Mangunan, Kec.
+            Dlingo, Kabupaten Bantul, Daerah Istimewa Yogyakarta.
+          </p>
+          <a
+            href="https://maps.google.com/maps?q=hutan_pinus_mangunan%20"
+            target="_blank"
+            >Maps
+            <i
+              class="fa-solid fa-location-dot fa-bounce fa-xl"
+              style="color: #246fe2"
+            ></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <!--end Destinasi-->
+
+    <script src="/static/scripts/destination.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <!--gsock-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+      gsap.from(".search-box", {
+        duration: 2.5,
+        y: -100,
+        opacity: 0,
+      });
+      gsap.from(".container-img", {
+        duration: 2.5,
+        y: 200,
+        opacity: 0,
+      });
+    </script>
+  </body>
+</html>
