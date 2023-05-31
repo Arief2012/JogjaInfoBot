@@ -21,3 +21,25 @@ search.addEventListener("keyup", () => {
         });
     }
 });
+
+//scroling conten kembali
+
+const cardContent = document.querySelectorAll('.container-img .card .content');
+
+cardContent.forEach(content => {
+  let isCursorOverCard = false;
+
+  content.addEventListener('mouseenter', () => {
+    isCursorOverCard = true;
+  });
+
+  content.addEventListener('mouseleave', () => {
+    isCursorOverCard = false;
+  });
+
+  setInterval(() => {
+    if (!isCursorOverCard) {
+      content.scrollTop += -1;
+    }
+  }, 10);
+});
